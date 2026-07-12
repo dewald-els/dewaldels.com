@@ -1,0 +1,6 @@
+*.log
+.env
+node_modules
+.vscode
+thumbs.db
+

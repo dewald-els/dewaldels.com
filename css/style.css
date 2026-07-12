@@ -1,0 +1,327 @@
+/* ─── BASE ───────────────────────────────────────────── */
+
+/* Safe area insets for notched devices (iPhone etc.) */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Screen reader only — visually hidden but accessible to assistive tech */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.sr-only.focus\:not-sr-only:focus {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: nowrap;
+}
+
+::selection {
+  background: rgba(110, 231, 183, 0.2);
+  color: #fff;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ─── NAV ────────────────────────────────────────────── */
+#navbar.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #6ee7b7;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ─── TECH TAGS ──────────────────────────────────────── */
+.tech-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(110, 231, 183, 0.7);
+  background: rgba(110, 231, 183, 0.06);
+  border: 1px solid rgba(110, 231, 183, 0.1);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.tech-tag:hover {
+  background: rgba(110, 231, 183, 0.12);
+  border-color: rgba(110, 231, 183, 0.2);
+  color: rgba(110, 231, 183, 0.9);
+}
+
+/* ─── SECTION TITLES ─────────────────────────────────── */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+.section-title::before {
+  content: '//';
+  position: absolute;
+  left: -2rem;
+  color: #6ee7b7;
+  opacity: 0.4;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+/* ─── PROJECT CARDS ──────────────────────────────────── */
+.project-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── BLOG CARDS ─────────────────────────────────────── */
+.blog-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── TIMELINE ───────────────────────────────────────── */
+.timeline-item {
+  transition: opacity 0.3s ease;
+}
+.timeline-item:hover {
+  opacity: 1;
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease forwards;
+}
+
+/* Intersection Observer reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── PROFILE IMAGE ──────────────────────────────────── */
+#hero img {
+  transition: box-shadow 0.3s ease;
+}
+#hero img:hover {
+  box-shadow: 0 0 30px rgba(110, 231, 183, 0.15);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section-title::before {
+    display: none;
+  }
+}
+
+/* ─── TOOLTIPS ───────────────────────────────────────── */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 4px 10px;
+  background: #222;
+  color: #e5e5e5;
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #222;
+}
+.group:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ─── LINK STYLES ────────────────────────────────────── */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Smooth focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── REDUCED MOTION ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .animate-bounce {
+    animation: none !important;
+  }
+
+  .project-card:hover,
+  .blog-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ─── PRINT STYLES ──────────────────────────────────── */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  #navbar,
+  #mobile-menu,
+  #menu-toggle,
+  .tooltip,
+  .animate-bounce,
+  .scroll-link,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  section {
+    page-break-inside: avoid;
+    padding: 1rem 0;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript"]::after {
+    content: "";
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .tech-tag {
+    border: 1px solid #ccc;
+    background: none !important;
+  }
+
+  .timeline-item {
+    border-left-color: #ccc !important;
+    page-break-inside: avoid;
+  }
+}
