@@ -1,14 +1,6 @@
 (() => {
   'use strict';
 
-  // ─── NAV SCROLL EFFECT ──────────────────────────────
-  const navbar = document.getElementById('navbar');
-  const handleScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
   // ─── MOBILE MENU TOGGLE ─────────────────────────────
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -21,7 +13,6 @@
     menuToggle.setAttribute('aria-expanded', 'true');
     menuOpen.classList.add('hidden');
     menuClose.classList.remove('hidden');
-    // Focus first link in mobile menu
     const firstLink = mobileMenu.querySelector('a');
     if (firstLink) firstLink.focus();
   };
@@ -61,75 +52,34 @@
         e.preventDefault();
         lastElement.focus();
       }
-    } else {
-      if (document.activeElement === lastElement) {
-        e.preventDefault();
-        firstElement.focus();
-      }
+    } else if (document.activeElement === lastElement) {
+      e.preventDefault();
+      firstElement.focus();
     }
   });
 
   // Close mobile menu when clicking a link
-  document.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu(false);
-    });
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => closeMenu(false));
   });
 
   // ─── ACTIVE NAV LINK ON SCROLL ──────────────────────
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  const observerOptions = {
-    rootMargin: '-20% 0px -70% 0px',
-    threshold: 0,
-  };
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
-      }
-    });
-  }, observerOptions);
-
-  sections.forEach(section => sectionObserver.observe(section));
-
-  // ─── REVEAL ON SCROLL ───────────────────────────────
-  const revealElements = document.querySelectorAll(
-    '.project-card, .blog-card, .timeline-item, .tech-tag'
-  );
-
-  const revealObserver = new IntersectionObserver(
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, i * 50);
-          revealObserver.unobserve(entry.target);
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
         }
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
   );
 
-  revealElements.forEach(el => {
-    el.classList.add('reveal');
-    revealObserver.observe(el);
-  });
-
-  // ─── SMOOTH SCROLL POLYFILL FOR SAFARI ──────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+  sections.forEach((section) => sectionObserver.observe(section));
 })();

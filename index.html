@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <title>Dewald Els — Tech Lead & Senior Full Stack Developer</title>
-  <meta name="description" content="Tech Lead and Senior Full Stack Developer with 14+ years of experience building scalable web, mobile, and SaaS applications. Based in Oslo, Norway." />
+  <meta name="theme-color" content="#f6f4ef" />
+  <title>Dewald Els — Software Developer</title>
+  <meta name="description" content="Software Developer with 14+ years of experience building scalable web, mobile, and SaaS applications. Based in Tokyo, Japan." />
   <meta name="author" content="Dewald Els" />
   <link rel="canonical" href="https://dewaldels.com/" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -15,8 +13,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dewaldels.com/" />
-  <meta property="og:title" content="Dewald Els — Tech Lead & Senior Full Stack Developer" />
-  <meta property="og:description" content="Tech Lead and Senior Full Stack Developer with 14+ years of experience building scalable web, mobile, and SaaS applications." />
+  <meta property="og:title" content="Dewald Els — Software Developer" />
+  <meta property="og:description" content="Software Developer with 14+ years of experience building scalable web, mobile, and SaaS applications." />
   <meta property="og:image" content="https://dewaldels.com/img/profile.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -25,8 +23,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dewald Els — Tech Lead & Senior Full Stack Developer" />
-  <meta name="twitter:description" content="Tech Lead and Senior Full Stack Developer with 14+ years of experience building scalable web, mobile, and SaaS applications." />
+  <meta name="twitter:title" content="Dewald Els — Software Developer" />
+  <meta name="twitter:description" content="Software Developer with 14+ years of experience building scalable web, mobile, and SaaS applications." />
   <meta name="twitter:image" content="https://dewaldels.com/img/profile.jpg" />
 
   <!-- JSON-LD Person Schema -->
@@ -37,12 +35,12 @@
     "name": "Dewald Els",
     "url": "https://dewaldels.com",
     "image": "https://dewaldels.com/img/profile.jpg",
-    "jobTitle": "Tech Lead & Senior Full Stack Developer",
-    "description": "Senior Full-Stack Engineer and Technical Lead with 14+ years of experience building scalable web, mobile, and SaaS applications.",
+    "jobTitle": "Software Developer",
+    "description": "Software Developer with 14+ years of experience building scalable web, mobile, and SaaS applications.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Oslo",
-      "addressCountry": "NO"
+      "addressLocality": "Tokyo",
+      "addressCountry": "JP"
     },
     "sameAs": [
       "https://github.com/dewald-els",
@@ -54,562 +52,282 @@
   }
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            surface: {
-              0: '#0a0a0a',
-              1: '#111111',
-              2: '#1a1a1a',
-              3: '#222222',
-            },
-            accent: {
-              DEFAULT: '#6ee7b7',
-              dim: '#34d399',
-              muted: 'rgba(110,231,183,0.1)',
-            },
-          },
-          fontFamily: {
-            mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
-            sans: ['"Inter"', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-surface-0 text-gray-300 font-sans antialiased">
+<body>
 
-  <!-- ─── SKIP NAV ────────────────────────────────────── -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-surface-0 focus:rounded-lg focus:font-semibold focus:outline-none">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
-  <nav id="navbar" aria-label="Main navigation" class="fixed top-0 w-full z-50 transition-all duration-300">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#hero" class="font-mono text-accent text-lg font-medium tracking-tight hover:opacity-80 transition">
-        &lt;dewald /&gt;
-      </a>
-      <div id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#about" class="nav-link hover:text-white transition-colors">About</a>
-        <a href="#projects" class="nav-link hover:text-white transition-colors">Projects</a>
-        <a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a>
-        <a href="#blog" class="nav-link hover:text-white transition-colors">Blog</a>
-        <a href="#contact" class="px-4 py-2 border border-accent/40 text-accent rounded-lg hover:bg-accent/10 transition-all">Contact</a>
-      </div>
-      <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Dewald Els</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="btn btn-dark btn-sm nav-cta">Get in touch</a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg id="menu-close" class="hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-surface-0/95 backdrop-blur-md" aria-hidden="true">
-      <div class="px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-        <a href="#about" class="mobile-nav-link hover:text-white transition-colors">About</a>
-        <a href="#projects" class="mobile-nav-link hover:text-white transition-colors">Projects</a>
-        <a href="#experience" class="mobile-nav-link hover:text-white transition-colors">Experience</a>
-        <a href="#blog" class="mobile-nav-link hover:text-white transition-colors">Blog</a>
-        <a href="#contact" class="mobile-nav-link text-accent hover:text-accent-dim transition-colors">Contact</a>
-      </div>
+    <div id="mobile-menu" class="mobile-menu hidden" aria-hidden="true">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#work" class="mobile-nav-link">Work</a>
+      <a href="#journey" class="mobile-nav-link">Journey</a>
+      <a href="#contact" class="mobile-nav-link">Get in touch</a>
     </div>
-  </nav>
+  </header>
 
-  <main id="main-content">
+  <main id="main-content" class="container">
 
-  <!-- ─── HERO ────────────────────────────────────────── -->
-  <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20 pb-10 relative overflow-hidden" aria-label="Introduction">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(110,231,183,0.04)_0%,transparent_70%)]" aria-hidden="true"></div>
-    <div class="max-w-3xl text-center relative z-10">
-      <div class="mb-8 opacity-0 animate-fade-in-up" style="animation-delay: 0s">
-        <img src="img/profile.jpg" alt="Dewald Els, Tech Lead and Senior Full Stack Developer" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-accent/20 shadow-lg shadow-accent/5" />
+    <!-- ─── HERO ────────────────────────────────────────── -->
+    <section id="top" class="hero" aria-label="Introduction">
+      <div class="hero-text">
+        <p class="status"><span class="status-dot" aria-hidden="true"></span>Software developer · Tokyo, Japan</p>
+        <h1>I build nice things for people.</h1>
+        <p class="hero-lead">Hi, I'm Dewald. For 14+ years I've been turning ideas into apps and websites, and helping teams do their best work.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-dark">See my work</a>
+          <a href="https://www.dropbox.com/scl/fi/bfrbq9q97y9jwlru6j32v/DewaldElsResume.pdf?rlkey=2y35j7zc2xiswqbhywpz0tvqo&st=hhjvmp18&dl=1" target="_blank" rel="noopener" class="btn btn-light">Download CV<span class="sr-only"> (opens in new tab)</span></a>
+        </div>
       </div>
-      <p class="font-mono text-accent text-sm mb-4 tracking-widest uppercase opacity-0 animate-fade-in-up" style="animation-delay: 0.1s">Tech Lead &amp; Senior Full Stack Developer</p>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 opacity-0 animate-fade-in-up" style="animation-delay: 0.25s">
-        Dewald Els
-      </h1>
-      <p class="text-lg sm:text-xl text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in-up" style="animation-delay: 0.4s">
-        Full-stack builder. 14+ years turning ideas into products across web, mobile, and everything in between.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up" style="animation-delay: 0.55s">
-        <a href="#projects" class="px-6 py-3 bg-accent text-surface-0 font-semibold rounded-lg hover:bg-accent-dim transition-all shadow-lg shadow-accent/10">
-          View My Work
-        </a>
-        <a href="https://www.dropbox.com/scl/fi/bfrbq9q97y9jwlru6j32v/DewaldElsResume.pdf?rlkey=2y35j7zc2xiswqbhywpz0tvqo&st=hhjvmp18&dl=1" target="_blank" rel="noopener" class="px-6 py-3 border border-white/15 text-gray-300 rounded-lg hover:border-white/30 hover:text-white transition-all inline-flex items-center gap-2" aria-label="Download resume (opens in new tab)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-          Download Resume
-        </a>
-        <a href="#contact" class="px-6 py-3 border border-white/15 text-gray-300 rounded-lg hover:border-white/30 hover:text-white transition-all">
-          Get In Touch
-        </a>
+      <div class="hero-photo">
+        <div class="photo-wrap">
+          <img src="img/profile.jpg" alt="Dewald Els, Software Developer" width="380" height="475" />
+        </div>
       </div>
-      <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 0.7s">
-        <a href="#about" class="inline-flex flex-col items-center text-gray-400 hover:text-gray-300 transition-colors" aria-hidden="true" tabindex="-1">
-          <span class="text-xs mb-2 tracking-widest uppercase">Scroll</span>
-          <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </section>
+
+    <!-- ─── ABOUT ───────────────────────────────────────── -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div class="about-title">
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading" class="section-title">Part developer, part game maker.</h2>
+      </div>
+      <div class="about-body">
+        <p>I've spent 14+ years building software across hospitality, finance, education and transport. I love working on friendly, well-made products and sharing what I learn along the way.</p>
+        <p>Outside of work I make small browser games, write, and play more retro video games than I should. That playful side keeps me curious, and it shows up in what I build. You can find my games on <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener">itch.io</a> and my writing on <a href="https://medium.com/@dewald-els" target="_blank" rel="noopener">Medium</a>.</p>
+        <p>I'm based in Tokyo, and open to interesting remote roles or a move somewhere new.</p>
+        <p class="tools-label">Tools I like to use</p>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">PHP</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Azure</span>
+          <span class="chip">React Native</span>
+          <span class="chip">Go</span>
+          <span class="chip">Godot</span>
+          <span class="chip">Claude Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WORK ────────────────────────────────────────── -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="section-head">
+        <div class="section-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
           </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── ABOUT ───────────────────────────────────────── -->
-  <section id="about" class="py-24 px-6" aria-labelledby="about-heading">
-    <div class="max-w-5xl mx-auto">
-      <h2 id="about-heading" class="section-title text-3xl font-bold text-white mb-12">About Me</h2>
-      <div class="grid md:grid-cols-5 gap-12">
-        <div class="md:col-span-2 space-y-4">
-          <p class="text-gray-400 leading-relaxed">
-            Senior Full-Stack Engineer and Technical Lead with 14+ years of experience building scalable web, mobile, and SaaS applications across hospitality, fintech, education, and transport.
-          </p>
-          <p class="text-gray-400 leading-relaxed">
-            I'm a hands-on tech lead — I still write production code every day while guiding architecture decisions, mentoring developers, and shipping products that clients actually use.
-          </p>
-          <p class="text-gray-400 leading-relaxed">
-            I'm based in Oslo, Norway and currently open to opportunities worldwide. When I'm not shipping production code, you'll find me building games on <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener" class="text-accent hover:text-accent-dim transition-colors">itch.io</a> or writing on <a href="https://medium.com/@dewald-els" target="_blank" rel="noopener" class="text-accent hover:text-accent-dim transition-colors">Medium</a>.
-          </p>
-          <div class="pt-2 flex items-center gap-2 text-sm text-gray-400">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <span>Oslo, Norway — Open to remote &amp; relocation</span>
-          </div>
         </div>
-        <div class="md:col-span-3">
-          <h3 class="text-sm font-mono text-accent tracking-widest uppercase mb-6">Tech Stack</h3>
-          <div class="space-y-5">
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Languages</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Kotlin</span>
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">C#</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Frontend</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">Svelte</span>
-                <span class="tech-tag">Angular</span>
-                <span class="tech-tag">Vue</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">shadcn/ui</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">State Management</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">Redux</span>
-                <span class="tech-tag">Redux Toolkit</span>
-                <span class="tech-tag">TanStack Query</span>
-                <span class="tech-tag">TanStack Start</span>
-                <span class="tech-tag">Vuex</span>
-                <span class="tech-tag">Svelte Store</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Backend & Runtime</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Bun</span>
-                <span class="tech-tag">REST APIs</span>
-                <span class="tech-tag">GraphQL</span>
-                <span class="tech-tag">OAuth 2.0</span>
-                <span class="tech-tag">JWT</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Mobile</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Android (Java/Kotlin)</span>
-                <span class="tech-tag">Ionic</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Cloud & DevOps</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">Azure</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">GitHub Actions</span>
-                <span class="tech-tag">GitHub CI/CD</span>
-                <span class="tech-tag">Azure Serverless</span>
-                <span class="tech-tag">Azure Service Bus</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Databases & Observability</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Datadog</span>
-                <span class="tech-tag">Amplitude</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">AI & Engineering</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-tag">OpenAI SDK</span>
-                <span class="tech-tag">Ollama</span>
-                <span class="tech-tag">Jest</span>
-                <span class="tech-tag">NX Monorepo</span>
-                <span class="tech-tag">Jira</span>
-              </div>
-            </div>
-          </div>
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-heading" class="section-title">Things I've made along the way.</h2>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ─── PROJECTS ────────────────────────────────────── -->
-  <section id="projects" class="py-24 px-6 bg-surface-1" aria-labelledby="projects-heading">
-    <div class="max-w-5xl mx-auto">
-      <h2 id="projects-heading" class="section-title text-3xl font-bold text-white mb-4">Projects</h2>
-      <p class="text-gray-400 mb-12 max-w-lg">A selection of side projects, open source work, and things I've built for fun or to solve real problems.</p>
+      <div class="work-list">
 
-      <div class="grid md:grid-cols-2 gap-6">
+        <a class="card feature bg-mist" href="https://myprolink.info/dewaldels" target="_blank" rel="noopener">
+          <div class="feature-media">
+            <img src="img/myprolink.png" alt="Screenshot of the MyProLink website showing three example profile pages" width="1354" height="792" loading="lazy" />
+          </div>
+          <div class="feature-text">
+            <p class="tag">Website</p>
+            <h3>MyProLink</h3>
+            <p>A digital business card. Print the QR code and people land straight on your professional profile.</p>
+            <span class="link-arrow">Visit site →<span class="sr-only"> (opens in new tab)</span></span>
+          </div>
+        </a>
 
-        <!-- MyProLink -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" /><path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" /></svg>
-            <div class="flex gap-3">
-              <a href="https://myprolink.info/dewaldels" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent transition-colors" aria-label="View MyProLink live demo (opens in new tab)">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
+        <!-- TODO: replace the link below with the Tic Tac Toe game's real URL -->
+        <a class="card feature bg-sage" href="https://mrbetamax.itch.io/" target="_blank" rel="noopener">
+          <div class="feature-media game">
+            <img src="img/tictactoe.png" alt="Start screen of my Tic Tac Toe game with Play online, Vs computer and Pass and play buttons" width="922" height="592" loading="lazy" />
+          </div>
+          <div class="feature-text">
+            <p class="tag">Game · Multiplayer</p>
+            <h3>Tic Tac Toe, with a twist</h3>
+            <p>The classic game with a surprise or two. Play online with a friend, against the computer, or pass the device around.</p>
+            <span class="link-arrow">Play it →<span class="sr-only"> (opens in new tab)</span></span>
+          </div>
+        </a>
+
+        <a class="card feature bg-sand" href="https://www.amazon.in/boy-who-could-stop-smiling-ebook/dp/B0H46VSW3W" target="_blank" rel="noopener">
+          <div class="feature-media book">
+            <img src="img/book.jpg" alt="Cover of the book The Boy Who Could Not Stop Smiling, a pen drawing of a smiling boy with his dog beside a seaside village" width="1055" height="1491" loading="lazy" />
+          </div>
+          <div class="feature-text">
+            <p class="tag">Book · 2026</p>
+            <h3>The Boy Who Could Not Stop Smiling</h3>
+            <p>My latest book, which reached the Top 500 sales ranking on Amazon. I also wrote “Responsive Web Design” for Packt in 2015.</p>
+            <span class="link-arrow">See the book →<span class="sr-only"> (opens in new tab)</span></span>
+          </div>
+        </a>
+
+        <div class="card feature bg-lilac">
+          <div class="feature-media">
+            <img src="img/imaginecup.png" alt="Microsoft Imagine Cup banner" width="960" height="540" loading="lazy" />
+          </div>
+          <div class="feature-text">
+            <p class="tag">Award · 2012</p>
+            <h3>National winner, Microsoft Imagine Cup</h3>
+            <p class="last">Won the Game Development category with a game concept built during my university years, up against teams from across the country.</p>
+          </div>
+        </div>
+
+        <a class="card feature bg-mist" href="https://uxdx.com/profile/dewald-els/" target="_blank" rel="noopener">
+          <div class="feature-media">
+            <img src="img/talk-fonts.png" alt="Title slide of my talk, Fonts: From clay to pixels, at UXDX Oslo on 15 April 2026" width="1600" height="1000" loading="lazy" />
+          </div>
+          <div class="feature-text">
+            <p class="tag">Speaking · UXDX Oslo, April 2026</p>
+            <h3>Fonts: From Clay to Pixels</h3>
+            <p>A talk on how typography travelled from clay tablets and printing presses to the text on our screens, and why centuries-old limits still shape the products we build today.</p>
+            <span class="link-arrow">See my speaker profile →<span class="sr-only"> (opens in new tab)</span></span>
+          </div>
+        </a>
+
+        <div class="duo">
+          <a class="card mini bg-stone" href="https://mrbetamax.itch.io/" target="_blank" rel="noopener">
+            <div>
+              <p class="tag">Games · Made for fun</p>
+              <h3>MrBetaMax Games</h3>
+              <p>Platformers, survival games and game jam experiments you can play right in your browser.</p>
             </div>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">MyProLink</h3>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">A professional digital hub for business and social links &mdash; like a digital business card. Generate a QR code, print it, and it takes people straight to your profile. Built with analytics, RBAC, and a focus on professional networking over social media noise.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">PHP</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">PostgreSQL</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">Stripe</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">JavaScript</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">Tailwind</span>
-          </div>
-        </article>
-
-        <!-- Memory Game -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4" /><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" /><path d="M8 9v2" /><path d="M7 10h2" /><path d="M14 10h2" /></svg>
-            <div class="flex gap-3">
-              <a href="https://memory-game.dewaldels.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent transition-colors" aria-label="Play memory game (opens in new tab)">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
+            <span class="link-arrow">Play them →<span class="sr-only"> (opens in new tab)</span></span>
+          </a>
+          <a class="card mini bg-oat" href="https://portfolio.dewaldels.com/" target="_blank" rel="noopener">
+            <div>
+              <p class="tag">Portfolio</p>
+              <h3>Case studies</h3>
+              <p>A showcase of selected projects and the stories behind them, easy to keep up to date.</p>
             </div>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">Memory Game</h3>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">A simple browser-based memory card game. Flip cards, match pairs, and test your recall. A fun side project built for entertainment.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">JavaScript</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">HTML</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">CSS</span>
-          </div>
-        </article>
-
-        <!-- itch.io Games -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4" /><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" /><path d="M8 9v2" /><path d="M7 10h2" /><path d="M14 10h2" /></svg>
-            <div class="flex gap-3">
-              <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent transition-colors" aria-label="Visit itch.io profile (opens in new tab)">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">MrBetaMax &mdash; Game Dev</h3>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">A collection of browser games built with Godot as a hobby. Includes platformers, survival games, and game jam experiments &mdash; a creative outlet outside of my day job.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">Godot</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">GDScript</span>
-          </div>
-        </article>
-
-        <!-- Portfolio -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 8h.01" /><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg>
-            <div class="flex gap-3">
-              <a href="https://portfolio.dewaldels.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent transition-colors" aria-label="View portfolio (opens in new tab)">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">Portfolio</h3>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">A dedicated portfolio site showcasing selected work and case studies, powered by Sanity as a headless CMS for easy content management.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">Next.js</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">Sanity</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">Headless CMS</span>
-          </div>
-        </article>
-
+            <span class="link-arrow">Take a look →<span class="sr-only"> (opens in new tab)</span></span>
+          </a>
+        </div>
       </div>
 
-      <!-- Publications & Achievements -->
-      <h3 class="text-xl font-semibold text-white mt-16 mb-6">Publications &amp; Achievements</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <!-- Published Book -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
-            <div class="flex gap-3">
-              <a href="https://www.amazon.in/boy-who-could-stop-smiling-ebook/dp/B0H46VSW3W" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent transition-colors" aria-label="View on Amazon (opens in new tab)">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-          <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">Published Author</h4>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">Published "Responsive Web Design" with Packt Publishing (2015) and "The Boy Who Could Not Stop Smiling" on Amazon (2026) &mdash; which hit the Top 500 sales ranking.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">Packt Publishing</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <a href="https://www.amazon.in/boy-who-could-stop-smiling-ebook/dp/B0H46VSW3W" target="_blank" rel="noopener" class="text-xs font-mono text-accent/70 hover:text-accent transition-colors" aria-label="View on Amazon (opens in new tab)">Amazon</a>
-          </div>
-        </article>
-
-        <!-- Microsoft Imagine Cup -->
-        <article class="project-card group bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center justify-between mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 21l8 0" /><path d="M12 17l0 4" /><path d="M7 4l10 0" /><path d="M17 4v8a5 5 0 0 1 -10 0v-8" /><path d="M3 9a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 9a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /></svg>
-          </div>
-          <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-accent transition-colors">Microsoft Imagine Cup</h4>
-          <p class="text-sm text-gray-400 mb-4 leading-relaxed">National Winner in the Game Development Category (2012) &mdash; built a game concept that won against nationwide competition during my university years.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs font-mono text-accent/70">C#</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">XNA</span>
-            <span class="text-xs text-gray-600">&bull;</span>
-            <span class="text-xs font-mono text-accent/70">Game Dev</span>
-          </div>
-        </article>
-
+      <div class="break">
+        <p>Fancy a quick break? Test your memory with a simple card-matching game.</p>
+        <a class="link-arrow" href="https://memory-game.dewaldels.com/" target="_blank" rel="noopener">Try my memory game →<span class="sr-only"> (opens in new tab)</span></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── EXPERIENCE ──────────────────────────────────── -->
-  <section id="experience" class="py-24 px-6" aria-labelledby="experience-heading">
-    <div class="max-w-5xl mx-auto">
-      <h2 id="experience-heading" class="section-title text-3xl font-bold text-white mb-4">Experience</h2>
-      <p class="text-gray-400 mb-12 max-w-lg">14+ years building products across hospitality, fintech, education, and transport.</p>
-      <div class="space-y-0">
-
-        <!-- Convene Hospitality -->
-        <div class="timeline-item relative pl-8 pb-12 border-l border-white/10">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Technical Lead</h3>
-            <span class="text-sm font-mono text-gray-400">09/2022 — Present</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">Convene Hospitality (formerly Arribatec) — Oslo, Norway</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Lead a team of 5 developers across sprint planning, PR reviews, onboarding, and weekly stakeholder reporting</li>
-            <li>Led international self-service kiosk deployments across Poland, the Netherlands, and Switzerland</li>
-            <li>Architected passport scanning integration using Desko scanners for MRZ-based guest check-in</li>
-            <li>Designed Azure Serverless queue architecture that reduced guest checkout time from ~30s to 5s</li>
-            <li>Achieved 100/100 security rating in a penetration testing review for the 6th largest hospitality company globally</li>
-            <li>Built production features with React, TypeScript, Tailwind CSS, and shadcn/ui</li>
-            <li>Established CI/CD with GitHub Actions, Docker, and Azure Container Registry</li>
-            <li>Introduced AI-assisted engineering governance using OpenCode with AGENTS.md guardrails</li>
-          </ul>
-        </div>
-
-        <!-- Noroff -->
-        <div class="timeline-item relative pl-8 pb-12 border-l border-white/10">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent/50 rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Lead Front-End Development Lecturer</h3>
-            <span class="text-sm font-mono text-gray-400">03/2019 — 08/2022</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">Noroff AS — Oslo, Norway</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Owned end-to-end delivery of the front-end development track for cohorts of up to 50 students</li>
-            <li>Delivered training across React, Vue, Angular, Node.js, HTML/CSS, JavaScript, and Azure deployment</li>
-            <li>Led monthly one-on-one progress reviews, final project mentorship, and intervention planning</li>
-            <li>Designed and delivered a 3-month full-stack reskilling programme for 12 Scania Sweden employees</li>
-          </ul>
-        </div>
-
-        <!-- Sumo Development -->
-        <div class="timeline-item relative pl-8 pb-12 border-l border-white/10">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent/30 rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Founder & Solo Full-Stack Developer</h3>
-            <span class="text-sm font-mono text-gray-400">01/2016 — 06/2019</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">Sumo Development — Pretoria, South Africa</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Ran a solo web and mobile development consultancy for small-business clients</li>
-            <li>Built bespoke POS and ticketing system for the national bus terminal in Lusaka, Zambia</li>
-            <li>Managed full client lifecycle from requirements to deployment and invoicing</li>
-          </ul>
-        </div>
-
-        <!-- VouchBase -->
-        <div class="timeline-item relative pl-8 pb-12 border-l border-white/10">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent/30 rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Lead Web & Mobile Developer</h3>
-            <span class="text-sm font-mono text-gray-400">01/2014 — 06/2019</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">VouchBase — Pretoria, South Africa</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Built multilingual web and mobile POS systems using AngularJS, Ionic, and PHP</li>
-            <li>Integrated hardware printing for high-volume transaction environments</li>
-          </ul>
-        </div>
-
-        <!-- Bridge Loans -->
-        <div class="timeline-item relative pl-8 pb-12 border-l border-white/10">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent/20 rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Senior Web Developer</h3>
-            <span class="text-sm font-mono text-gray-400">01/2013 — 01/2014</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">Bridge Loans — Pretoria, South Africa</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Led full-stack development of client-facing loan application systems using CakePHP and Joomla</li>
-            <li>Supported reliable fintech workflows across web and mobile platforms</li>
-          </ul>
-        </div>
-
-        <!-- Axxess DSL -->
-        <div class="timeline-item relative pl-8 border-l border-white/10 last:pb-0">
-          <div class="absolute left-0 top-1 w-3 h-3 bg-accent/20 rounded-full -translate-x-[6.5px] ring-4 ring-surface-0"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-            <h3 class="text-lg font-semibold text-white">Software Developer</h3>
-            <span class="text-sm font-mono text-gray-400">01/2013 — 01/2014</span>
-          </div>
-          <p class="text-accent text-sm font-medium mb-3">Axxess DSL — Port Elizabeth, South Africa</p>
-          <ul class="text-gray-400 text-sm leading-relaxed max-w-xl space-y-2">
-            <li>Developed internal CRM, invoicing automation, and customer support portal features for an ISP</li>
-          </ul>
-        </div>
-
+    <!-- ─── JOURNEY ─────────────────────────────────────── -->
+    <section id="journey" class="section" aria-labelledby="journey-heading">
+      <div class="section-head">
+      <div class="section-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+        </svg>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── BLOG ────────────────────────────────────────── -->
-  <section id="blog" class="py-24 px-6 bg-surface-1" aria-labelledby="blog-heading">
-    <div class="max-w-5xl mx-auto">
-      <h2 id="blog-heading" class="section-title text-3xl font-bold text-white mb-4">Blog</h2>
-      <p class="text-gray-400 mb-12 max-w-lg">Thoughts on engineering, architecture, and the tools I use daily.</p>
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <a href="https://medium.com/@dewald-els" target="_blank" rel="noopener" class="blog-card group block bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-            <span class="text-xs text-gray-400 font-mono">Medium</span>
-          </div>
-          <h3 class="text-base font-semibold text-white mt-2 mb-2 group-hover:text-accent transition-colors leading-snug">Read my latest articles on Medium</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">Engineering deep-dives, technical tutorials, and lessons learned from 14+ years in the trenches.</p>
-          <span class="inline-block mt-4 text-xs font-mono text-accent/60" aria-hidden="true">Visit Medium &rarr;</span>
-          <span class="sr-only">(opens in new tab)</span>
-        </a>
-
-        <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener" class="blog-card group block bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.13 1.338C2.08 1.96.02 3.103 0 3.6v.812c0 1.09.587 1.96 1.458 2.415.853.444 1.984.583 2.644.747 2.183.54 3.09 1.458 3.09 2.86v6.36c0 .687-.064 1.36-.246 1.975-.48 1.646-1.566 2.578-2.82 2.99C3.35 21.568 2.582 21.67 1.6 21.67c-.388 0-.77-.05-1.158-.102C.216 21.518 0 21.375 0 21.11v-.157c0-.445.385-.76.78-.614.554.206 1.15.26 1.735.26.52 0 1.003-.08 1.4-.306.32-.18.552-.474.552-.88v-5.88c0-.405-.232-.7-.552-.88-.397-.226-.88-.306-1.4-.306-.75 0-1.52.14-2.25.42-.18.07-.36.15-.54.24-.49.25-.84.71-.84 1.24v.33c0 .23.18.42.42.42h1.14c.23 0 .42-.18.42-.42V8.69c0-.68.15-1.26.42-1.74.27-.48.66-.84 1.17-1.11.51-.27 1.11-.45 1.8-.54C7.83 5.2 8.7 5.06 9.54 4.92c.24-.04.42-.25.42-.5V3.6c0-.25-.16-.47-.4-.53C8.95 2.82 8.4 2.7 7.83 2.58c-.75-.16-1.56-.32-2.46-.6C4.28 1.64 3.56 1.42 3.13 1.338zM15.6 6.5c-.24 0-.42.18-.42.42v1.14c0 .23.18.42.42.42h1.14c.23 0 .42-.18.42-.42V6.92c0-.24-.18-.42-.42-.42h-1.14zm-4.62 3.42c-.24 0-.42.18-.42.42v6.36c0 .24.18.42.42.42h1.14c.23 0 .42-.18.42-.42V10.34c0-.24-.18-.42-.42-.42h-1.14zm6.6 0c-.24 0-.42.18-.42.42v6.36c0 .24.18.42.42.42h1.14c.23 0 .42-.18.42-.42V10.34c0-.24-.18-.42-.42-.42h-1.14zm-2.28 3.12c-.24 0-.42.18-.42.42v3.24c0 .24.18.42.42.42h1.14c.23 0 .42-.18.42-.42v-3.24c0-.24-.18-.42-.42-.42h-1.14zM12 2.4c-.24 0-.42.18-.42.42v1.14c0 .23.18.42.42.42h1.14c.23 0 .42-.18.42-.42V2.82c0-.24-.18-.42-.42-.42H12z"/></svg>
-            <span class="text-xs text-gray-400 font-mono">itch.io</span>
-          </div>
-          <h3 class="text-base font-semibold text-white mt-2 mb-2 group-hover:text-accent transition-colors leading-snug">Play my browser games on itch.io</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">Side-scrolling platformers, survival games, and game jam experiments &mdash; built with Godot.</p>
-          <span class="inline-block mt-4 text-xs font-mono text-accent/60" aria-hidden="true">Visit itch.io &rarr;</span>
-          <span class="sr-only">(opens in new tab)</span>
-        </a>
-
-        <a href="https://myprolink.info/dewaldels" target="_blank" rel="noopener" class="blog-card group block bg-surface-2 border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-            <span class="text-xs text-gray-400 font-mono">MyProLink</span>
-          </div>
-          <h3 class="text-base font-semibold text-white mt-2 mb-2 group-hover:text-accent transition-colors leading-snug">My Pro Link &mdash; all your links in one place</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">My professional digital hub. All my profiles, analytics, and a QR code for your business card.</p>
-          <span class="inline-block mt-4 text-xs font-mono text-accent/60" aria-hidden="true">Visit MyProLink &rarr;</span>
-          <span class="sr-only">(opens in new tab)</span>
-        </a>
-
+      <div>
+        <p class="eyebrow">Journey</p>
+        <h2 id="journey-heading" class="section-title">Where I've worked.</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── CONTACT ─────────────────────────────────────── -->
-  <section id="contact" class="py-24 px-6" aria-labelledby="contact-heading">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 id="contact-heading" class="section-title text-3xl font-bold text-white mb-4">Get In Touch</h2>
-      <p class="text-gray-400 mb-10 leading-relaxed">
-        I'm currently employed but always open to interesting conversations. Whether you have a question, a collaboration idea, or just want to say hi — my inbox is open.
-      </p>
-      <a href="mailto:hello@dewaldels.com" class="inline-block px-8 py-4 bg-accent text-surface-0 font-semibold rounded-lg hover:bg-accent-dim transition-all shadow-lg shadow-accent/10 text-lg">
-        Say Hello
-      </a>
-      <div class="mt-12 flex items-center justify-center gap-6">
-        <a href="https://github.com/dewald-els" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors group relative" aria-label="GitHub (opens in new tab)" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-          <span class="tooltip">GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/dewald-els" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors group relative" aria-label="LinkedIn (opens in new tab)" title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
-          <span class="tooltip">LinkedIn</span>
-        </a>
-        <a href="https://medium.com/@dewald-els" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors group relative" aria-label="Medium (opens in new tab)" title="Medium">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M8 9h1l3 3l3 -3h1" /><path d="M8 15l2 0" /><path d="M14 15l2 0" /><path d="M9 9l0 6" /><path d="M15 9l0 6" /></svg>
-          <span class="tooltip">Medium</span>
-        </a>
-        <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors group relative" aria-label="itch.io (opens in new tab)" title="itch.io">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4" /><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" /><path d="M8 9v2" /><path d="M7 10h2" /><path d="M14 10h2" /></svg>
-          <span class="tooltip">itch.io</span>
-        </a>
-        <a href="https://myprolink.info/dewaldels" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors group relative" aria-label="MyProLink (opens in new tab)" title="MyProLink">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" /><path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" /></svg>
-          <span class="tooltip">MyProLink</span>
-        </a>
       </div>
-    </div>
-  </section>
+
+      <div class="timeline">
+        <div class="job">
+          <p class="job-date">2026 – now</p>
+          <div class="job-body">
+            <h3>Senior Full Stack Developer, Rakuten</h3>
+            <p class="job-place">Tokyo, Japan</p>
+            <p>Building full stack products with a focus on big data and analytics.</p>
+          </div>
+        </div>
+        <div class="job">
+          <p class="job-date">2022 – 2026</p>
+          <div class="job-body">
+            <h3>Technical Lead, Convene Hospitality</h3>
+            <p class="job-place">Oslo, Norway</p>
+            <p>Leading a team of 5. Rolled out self-service hotel check-in kiosks across Poland, the Netherlands and Switzerland, cut guest checkout from about 30 seconds to 5, and earned a perfect 100/100 in a security review.</p>
+          </div>
+        </div>
+        <div class="job">
+          <p class="job-date">2019 – 2022</p>
+          <div class="job-body">
+            <h3>Lead Front-End Lecturer, Noroff</h3>
+            <p class="job-place">Oslo, Norway</p>
+            <p>Ran the front-end track for classes of up to 50 students, and designed a 3-month reskilling programme for 12 Scania Sweden employees.</p>
+          </div>
+        </div>
+        <div class="job">
+          <p class="job-date">2016 – 2019</p>
+          <div class="job-body">
+            <h3>Founder, Sumo Development</h3>
+            <p class="job-place">Pretoria, South Africa</p>
+            <p>Ran my own small studio for local businesses, including a ticketing and till system for the national bus terminal in Lusaka, Zambia.</p>
+          </div>
+        </div>
+        <div class="job">
+          <p class="job-date">2014 – 2019</p>
+          <div class="job-body">
+            <h3>Lead Web &amp; Mobile Developer, VouchBase</h3>
+            <p class="job-place">Pretoria, South Africa</p>
+            <p>Built multilingual point-of-sale systems for web and mobile, including receipt printing for busy shops.</p>
+          </div>
+        </div>
+        <div class="job">
+          <p class="job-date">2012</p>
+          <div class="job-body">
+            <h3>Software Developer, Axxess DSL</h3>
+            <p class="job-place">Port Elizabeth, South Africa</p>
+            <p>Built customer, billing and support tools for an internet provider.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─────────────────────────────────────── -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="contact-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+        </svg>
+      </div>
+      <h2 id="contact-heading">Let's talk.</h2>
+      <p class="contact-lead">A question, an idea, or just a chat about games. My inbox is always open.</p>
+      <a href="mailto:hello@dewaldels.com" class="btn btn-dark">hello@dewaldels.com</a>
+      <div class="social">
+        <a href="https://linkedin.com/in/dewald-els" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="https://github.com/dewald-els" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="https://medium.com/@dewald-els" target="_blank" rel="noopener">Medium<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="https://mrbetamax.itch.io/" target="_blank" rel="noopener">itch.io<span class="sr-only"> (opens in new tab)</span></a>
+      </div>
+    </section>
 
   </main>
 
   <!-- ─── FOOTER ──────────────────────────────────────── -->
-  <footer class="py-8 px-6 pb-[calc(1rem+env(safe-area-inset-bottom))] border-t border-white/5">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-gray-400 font-mono">&copy; 2026 Dewald Els</p>
-      <p class="text-sm text-gray-400">
-        Built with <span class="text-accent/60" aria-hidden="true">&hearts;</span><span class="sr-only">love</span> and way too much caffeine
-      </p>
-    </div>
+  <footer class="container footer">
+    <span>&copy; 2026 Dewald Els</span>
+    <span>Made on planet earth</span>
   </footer>
 
   <script src="js/main.js"></script>
