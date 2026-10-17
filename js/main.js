@@ -48,6 +48,14 @@
     if (root.dataset.pref === 'system') applyTheme('system');
   });
 
+  // ─── BACK TO TOP ────────────────────────────────────
+  const toTop = document.getElementById('to-top');
+  toTop.hidden = false;
+  const onScroll = () => toTop.classList.toggle('show', window.scrollY > 600);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0 }));
+
   // ─── MOBILE MENU TOGGLE ─────────────────────────────
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
