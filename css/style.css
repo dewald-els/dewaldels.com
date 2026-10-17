@@ -14,6 +14,9 @@
   --book: #e6d8c2;
   --sel: #cfdcd0;
   --dot: #8fb39a;
+  --amber: #f6e3b8;
+  --amber-ink: #8a5a12;
+  --amber-text: #5a4524;
   --sage-text: #3f4a44;
   --mist-text: #3f4b57;
   --sand-text: #554b3c;
@@ -70,6 +73,9 @@
   --oat: #262420;
   --oat-ink: #b9ae99;
 
+  --amber: #2d2518;
+  --amber-ink: #dcab52;
+  --amber-text: #cfbf9f;
   --sage-text: #b9c4bc;
   --mist-text: #b5c1cd;
   --sand-text: #c4b9a8;
@@ -550,7 +556,43 @@ img { max-width: 100%; }
 .bg-sand { background: var(--sand); } .bg-sand .tag { color: var(--sand-ink); } .bg-sand p { color: var(--sand-text); }
 .bg-lilac { background: var(--lilac); } .bg-lilac .tag { color: var(--lilac-ink); } .bg-lilac p { color: var(--lilac-text); }
 .bg-stone { background: var(--stone); } .bg-stone .tag { color: var(--stone-ink); } .bg-stone p { color: var(--stone-text); }
+.bg-amber { background: var(--amber); } .bg-amber .tag { color: var(--amber-ink); } .bg-amber p { color: var(--amber-text); }
 .bg-oat { background: var(--oat); } .bg-oat .tag { color: var(--oat-ink); } .bg-oat p { color: var(--oat-text); }
+
+/* ─── HIGHLIGHTS ─────────────────────────────────────── */
+.proud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 48px;
+}
+.proud-card {
+  flex: 1 1 300px;
+  min-width: 0;
+  padding: 36px;
+  border-radius: var(--radius);
+}
+.proud-card h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.proud-icon {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  background: var(--bg);
+  border-radius: 50%;
+}
+.proud-icon svg { width: 26px; height: 26px; }
+.bg-amber .proud-icon { color: var(--amber-ink); }
+#highlights .section-icon { background: var(--amber); color: var(--amber-ink); }
+.proud-card p + p { margin-top: 12px; }
+.proud-card .tag { margin-bottom: 10px; font-size: 14px; font-weight: 600; }
 
 /* ─── JOURNEY ────────────────────────────────────────── */
 .timeline {
