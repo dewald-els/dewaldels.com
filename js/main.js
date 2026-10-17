@@ -1,6 +1,53 @@
 (() => {
   'use strict';
 
+  // ─── THEME TOGGLE ───────────────────────────────────
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeMenu = document.getElementById('theme-menu');
+  const themeOpts = themeMenu.querySelectorAll('.theme-opt');
+  const darkQuery = matchMedia('(prefers-color-scheme: dark)');
+
+  const applyTheme = (pref) => {
+    const dark = pref === 'system' ? darkQuery.matches : pref === 'dark';
+    root.dataset.pref = pref;
+    root.dataset.theme = dark ? 'dark' : 'light';
+    document.querySelector('meta[name="theme-color"]').content = dark ? '#16181c' : '#f6f4ef';
+    themeOpts.forEach((o) => o.setAttribute('aria-checked', String(o.dataset.themeOpt === pref)));
+  };
+
+  const toggleThemeMenu = (open) => {
+    themeMenu.classList.toggle('hidden', !open);
+    themeToggle.setAttribute('aria-expanded', String(open));
+  };
+
+  applyTheme(root.dataset.pref || 'system');
+
+  themeToggle.addEventListener('click', () => toggleThemeMenu(themeMenu.classList.contains('hidden')));
+
+  themeOpts.forEach((o) => o.addEventListener('click', () => {
+    const pref = o.dataset.themeOpt;
+    applyTheme(pref);
+    try { pref === 'system' ? localStorage.removeItem('theme') : localStorage.setItem('theme', pref); } catch (e) {}
+    toggleThemeMenu(false);
+    themeToggle.focus();
+  }));
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.theme-switch')) toggleThemeMenu(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !themeMenu.classList.contains('hidden')) {
+      toggleThemeMenu(false);
+      themeToggle.focus();
+    }
+  });
+
+  // Follow live system changes while on System
+  darkQuery.addEventListener('change', () => {
+    if (root.dataset.pref === 'system') applyTheme('system');
+  });
+
   // ─── MOBILE MENU TOGGLE ─────────────────────────────
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
