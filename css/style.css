@@ -505,19 +505,44 @@ img { max-width: 100%; }
   justify-content: space-between;
   text-decoration: none;
 }
+.mini-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: var(--bg);
+  border-radius: 50%;
+}
+.mini-icon svg { width: 24px; height: 24px; }
+.bg-stone .mini-icon { color: var(--stone-ink); }
+.bg-oat .mini-icon { color: var(--oat-ink); }
 .mini .link-arrow { margin-top: 28px; }
 
 .break {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 24px;
+  gap: 16px 24px;
   margin-top: 20px;
-  padding: 24px 36px;
-  border: 1px solid var(--line);
+  padding: 28px 36px;
   border-radius: var(--radius);
 }
-.break p { flex: 1 1 380px; color: var(--ink-soft); }
+.break-icon {
+  display: flex;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-radius: 50%;
+  color: var(--lilac-ink);
+}
+.break-icon svg { width: 28px; height: 28px; }
+.break p { flex: 1 1 280px; }
+.break strong { color: var(--ink); }
 
 /* card colours */
 .bg-mist { background: var(--mist); } .bg-mist .tag { color: var(--mist-ink); } .bg-mist p { color: var(--mist-text); }
@@ -612,13 +637,22 @@ img { max-width: 100%; }
 
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
   padding-bottom: calc(40px + env(safe-area-inset-bottom));
   font-size: 15px;
   color: var(--muted);
+  text-align: center;
+}
+.footer .made {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.footer .made svg { width: 18px; height: 18px; }
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* ─── TO TOP ─────────────────────────────────────────── */
